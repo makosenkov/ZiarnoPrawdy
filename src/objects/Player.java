@@ -26,18 +26,21 @@ public class Player extends Character {
     public void plusFatigue(int deltaFatigue) {
         int newFatigue = this.getFatigue() + deltaFatigue;
         this.setFatigue(newFatigue);
-        System.out.println("Уровень тревоги: " + this.getFatigue() + "(+" + deltaFatigue + ")");
+        if (deltaFatigue > 0) System.out.println("Уровень усталости: " + this.getFatigue() + "(+" + deltaFatigue + ")");
+        else System.out.println("Уровень усталости: " + this.getFatigue() + "(" + deltaFatigue + ")");
     }
 
     public void plusAgility(int deltaAgility) {
         int newAgility = this.getAgility() + deltaAgility;
         this.setAgility(newAgility);
-        System.out.println("Ловкость: " + this.getAgility() + "(+" + deltaAgility + ")");
+        if (deltaAgility > 0) System.out.println("Ловкость: " + this.getAgility() + "(+" + deltaAgility + ")");
+        else System.out.println("Ловкость: " + this.getAgility() + "(" + deltaAgility + ")");
     }
 
     public void plusStrength(int deltaStrength) {
         int newStrength = this.getStrength() + deltaStrength;
         this.setStrength(newStrength);
-        System.out.println("Сила: " + this.getStrength() + "(+" + deltaStrength + ")");
+        if (deltaStrength > 0) System.out.println("Сила: " + this.getStrength() + "(+" + deltaStrength + ")");
+        else System.out.println("Сила: " + this.getStrength() + "(" + deltaStrength + ")");
     }
 }
